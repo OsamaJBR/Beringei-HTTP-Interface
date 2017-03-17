@@ -1,0 +1,22 @@
+[Unit]
+Description=beringei service on port %I
+After=network.target
+Requires=network.target
+
+[Service]
+# the user that runs the service
+User=USER
+Group=GROUP
+Type=notify
+NotifyAccess=all
+LimitNOFILE=infinity
+CPUAccounting=True
+BlockIOAccounting=True
+MemoryAccounting=True
+Restart=always
+KillSignal=SIGQUIT
+ExecStart=/bin/bash -l -c "cd path/to/code && exec uwsgi --http-socket 0.0.0.0:%i ./uwsgi.ini "
+ExecReload=/bin/bash -l -c "touch path/to/code/reload.txt"
+
+[Install]
+WantedBy=multi-user.target
