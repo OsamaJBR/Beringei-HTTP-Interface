@@ -6,9 +6,9 @@ It's an OpenSource project from facebook, you can read more about it here : http
 
 # Beringei-HTTP-Interface
 
-After following Facebook-Beringei instructions for sure you have asked yourself, how on earth I'm going to use this ? Executing binaries is the last thing that I really need to do.
+After following Facebook-Beringei instructions for sure you have asked yourself, how on earth I'm going to use this ? executing binaries is the last thing that I really need to do.
 
-And this is why I've built this simple http interface.
+And this is why I've built this simple HTTP interface.
 
 # How It Works
 
